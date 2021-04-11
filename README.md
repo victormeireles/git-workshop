@@ -36,11 +36,14 @@ Na mensagem do commit coloque um texto que esclareça as mudanças feitas. Pode 
 Agora, checkando novamente `git status`, este arquivo está nos untracked files.
 Como eu commito sem o git reclamar que eu não estou adicionando este arquivo que está untracked??
 
-Vamos adicionar um arquivo chamado .gitignore e coloar o nome do arquivo que eu quero ter no meu local, mas não na nuvem (sopa-de-legumes.txt)
+Vamos adicionar um arquivo chamado .gitignore e colocar o nome do arquivo que eu quero ter no meu local, mas não na nuvem (sopa-de-legumes.txt)
 Se checkarmos o git status novamente, este arquivo não está mais em untracked, só precisamos adicionar o .gitgnore
 
 `git add .`
 `git commit -m "fix: removing sopa-de-legumes.txt"`
+
+ps: Este caso é útil quando tenho arquivos de configuração próprio que eu preciso ter, mas não faz sentido para os outros integrantes do grupo. Um exemplo é o arquivo que vscode gera automaticamente `.vscode`.
+Se você quer apenas remover um arquivo no local e no remoto voce pode apenas deletar ele e adicionar as mudanças no git, ou fazer `git rm <nome do arquivo>`
 
 06. Por fim, vamos jogar todas as alterações na nuvem com o push:
 `git push -u origin 01-comandos-basicos`

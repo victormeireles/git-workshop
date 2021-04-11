@@ -33,3 +33,14 @@ Na mensagem do commit coloque um texto que esclareça as mudanças feitas. Pode 
 
 05. Temos uma receita que não quero mais ter no meu projeto: 'sopa-de-legumes.txt'. Entretanto eu quero mantê-la no meu local:
 `git rm --cached sopa-de-legumes.txt`
+Agora, checkando novamente `git status`, este arquivo está nos untracked files.
+Como eu commito sem o git reclamar que eu não estou adicionando este arquivo que está untracked??
+
+Vamos adicionar um arquivo chamado .gitignore e coloar o nome do arquivo que eu quero ter no meu local, mas não na nuvem (sopa-de-legumes.txt)
+Se checkarmos o git status novamente, este arquivo não está mais em untracked, só precisamos adicionar o .gitgnore
+
+`git add .`
+`git commit -m "fix: removing sopa-de-legumes.txt"`
+
+06. Por fim, vamos jogar todas as alterações na nuvem com o push:
+`git push -u origin 01-comandos-basicos`
